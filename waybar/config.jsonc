@@ -1,0 +1,180 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 34,
+  "spacing": 4,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/sep",
+    "hyprland/window",
+    "custom/sep",
+    "custom/media",
+  ],
+  // "modules-center": ["custom/media"],
+  // "modules-right": ["custom/gpu", "cpu", "memory", "custom/sep", "pulseaudio", "battery", "clock", "clock#simpleclock", "custom/sep", "tray", "custom/sep", "custom/power"],
+  "modules-right": [
+    "custom/gpuinfo",
+    "cpu",
+    "memory",
+    "custom/sep",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "clock#simpleclock",
+    "custom/sep",
+    "tray",
+    "custom/sep",
+    "custom/power",
+  ],
+
+  "custom/media": {
+    "format": "{}",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 40,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "smooth-scrolling-threshold": 10,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+  },
+
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false,
+  },
+
+  // "hyprland/window": {
+  //     "format": "{}",
+  //     "rewrite": {
+  //       "(.{72}).*": "$1.."
+  //     },
+  //     "icon": true,
+  //     "icon-size": 22
+  // },
+
+  "hyprland/window": {
+    "format": "",
+    "icon": true,
+    "icon-size": 20,
+  },
+
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10,
+  },
+
+  "clock#simpleclock": {
+    "tooltip": false,
+    "format": "  {:%H:%M}",
+  },
+
+  "clock": {
+    "format": "  {:L%a %d %b}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true,
+    "interval": 1,
+  },
+
+  "custom/gpuinfo": {
+    "exec": " /home/cloud/dotfiles/hypr/scripts/gpuinfo.sh",
+    "return-type": "json",
+    "format": "{}",
+    "rotate": 0,
+    "interval": 5, // once every 5 seconds
+    "tooltip": true,
+    "max-length": 1000,
+    "on-click": "/home/cloud/dotfiles/hypr/scripts/gpuinfo.sh --toggle",
+  },
+
+  // "custom/gpuinfo#nvidia": {
+  // "exec": " /home/cloud/dotfiles/hypr/scripts/gpuinfo.sh --use nvidia ",
+  // "return-type": "json",
+  // "format": "{}",
+  // "rotate": 0,
+  // "interval": 5, // once every 5 seconds
+  // "tooltip": true,
+  // "max-length": 1000
+  // },
+
+  // "custom/gpuinfo#intel": {
+  // "exec": " /home/cloud/dotfiles/hypr/scripts/gpuinfo.sh --use intel ",
+  // "return-type": "json",
+  // "format": "{}",
+  // "rotate": 0,
+  // "interval": 5, // once every 5 seconds
+  // "tooltip": true,
+  // "max-length": 1000
+  // },
+
+  "memory": {
+    "format": "󰍛  {used:0.2f}G",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "  muted",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰂑",
+      "headset": "󰂑",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "],
+    },
+    "on-click-middle": "pamixer -t",
+    "on-click": "pavucontrol",
+  },
+
+  // Battery
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20,
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6,
+  },
+
+  "custom/logo": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false,
+  },
+
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "wlogout --protocol layer-shell",
+    "format": "⏻ ",
+  },
+}

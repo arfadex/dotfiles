@@ -1,0 +1,8 @@
+* {
+    background:     #1e1e2e;  /* Mocha background */
+    background-alt: #262335;  /* Mocha alt background */
+    foreground:     #dcd7e1;  /* Mocha foreground */
+    selected:       #94E2D5;  /* Mocha selected */
+    active:         #f28fad;  /* Mocha active */
+    urgent:         #f28fad;  /* Mocha urgent */
+}
