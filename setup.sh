@@ -59,4 +59,8 @@ echo "Setting up Zsh configuration..."
 rm -f ~/.zshrc
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 
+# Clone wallpapers
+echo "Cloning wallpapers..."
+git clone --depth 1 https://github.com/arfadex/wallpapers ~/Pictures/wallpapers
+
 echo "Installation complete!"
