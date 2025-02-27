@@ -5,7 +5,7 @@ echo "Installing required packages..."
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm \
   breeze-gtk zsh eza gparted hypridle hyprland hyprlock kitty nwg-look \
-  qt6ct rofi-wayland starship thunar catnip viu \
+  qt6ct rofi-wayland starship thunar viu \
   xdg-desktop-portal-hyprland wl-clipboard brightnessctl swww
 
 yay -S --needed --noconfirm \
