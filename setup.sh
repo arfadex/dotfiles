@@ -44,20 +44,20 @@ echo "Copying configuration files..."
 cp ~/dotfiles/confs/* ~/.config/
 
 # Install Oh My Zsh and plugins
-echo "Installing Oh My Zsh..."
-sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+# echo "Installing Oh My Zsh..."
+# sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-echo "Installing Zsh plugins..."
-git clone https://github.com/zsh-users/zsh-autosuggestions \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# echo "Installing Zsh plugins..."
+# git clone https://github.com/zsh-users/zsh-autosuggestions \
+#   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
+#   ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# Replace default .zshrc with custom one
-echo "Setting up Zsh configuration..."
-rm -f ~/.zshrc
-ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+# # Replace default .zshrc with custom one
+# echo "Setting up Zsh configuration..."
+# rm -f ~/.zshrc
+# ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 
 # Clone wallpapers
 echo "Cloning wallpapers..."
