@@ -6,7 +6,6 @@
 - **Window Manager** 🪟: [Hyprland](https://github.com/hyprwm/Hyprland)
 - **Status Bar** 📊: [Hyprpanel](https://github.com/Jas-SinghFSU/HyprPanel)
 - **App Launcher** 🚀: [Rofi](https://github.com/davatorium/rofi)
-- **Login Manager** 🏦: [SDDM](https://github.com/sddm/sddm)
 - **Lockscreen** 🔒: [Hyprlock](https://github.com/hyprwm/hyprlock)
 
 ### Terminal and Shell
