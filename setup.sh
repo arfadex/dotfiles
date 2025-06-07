@@ -31,6 +31,7 @@ ln -s ~/.config/dotfiles/theming/.themes ~/.themes
 ln -s ~/.config/dotfiles/theming/.icons ~/.icons
 ln -s ~/.config/dotfiles/wal ~/.config/wal
 ln -s ~/.config/dotfiles/wlogout ~/.config/wlogout
+ln -s ~/.config/dotfiles/hyprpanel ~/.config/hyprpanel
 ln -s ~/.config/dotfiles/hypr ~/.config/hypr
 ln -s ~/.config/dotfiles/catnap ~/.config/catnap
 ln -s ~/.config/dotfiles/rofi ~/.config/rofi
