@@ -37,7 +37,7 @@ margin = [0, 0, 0,]
 
 [misc.imageMode]
 enable = true
-path   = "/home/cloud/.config/catnap/icons/cloud.png" # Please use only absolute paths
+path   = "/home/heiwa/.config/catnap/icons/heiwa.png" # Please use only absolute paths
 
 scale  = 30
 margin = [0, 0, 1]

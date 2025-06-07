@@ -1,4 +1,4 @@
-@import url("file:///home/cloud/.cache/wal/colors-waybar.css");
+@import url("file:///home/heiwa/.cache/wal/colors-waybar.css");
 
 /* Waybar CSS starts here */
 * {
