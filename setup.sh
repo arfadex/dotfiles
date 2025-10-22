@@ -144,7 +144,7 @@ fi
 echo ""
 
 if confirm "Install AUR packages with yay?"; then
-    YAY_PKGS="bibata-cursor-theme ags-hyprpanel-git hyprshot waypaper wlogout"
+    YAY_PKGS="bibata-cursor-theme ags-hyprpanel-git hyprshot zen-browser-bin waypaper wlogout"
     
     if [ "$DRY_RUN" = true ]; then
         gum style --foreground 214 "→ Installing AUR packages"
